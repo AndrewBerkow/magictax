@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortalComponent } from './portal/portal.component';
+import { NavigationComponent } from './navigation/navigation.component';
+
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,15 @@ import { PortalComponent } from './portal/portal.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    PortalComponent
+    PortalComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
