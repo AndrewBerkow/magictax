@@ -13,6 +13,11 @@ import { PortalComponent } from './portal/portal.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 import { MatSliderModule } from '@angular/material/slider';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,10 @@ import { MatSliderModule } from '@angular/material/slider';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
