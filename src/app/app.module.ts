@@ -18,6 +18,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { TaxReturnComponent } from './tax-return/tax-return.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { AboutComponent } from './about/about.component';
+import { HelpComponent } from './help/help.component';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import {MatButtonModule} from '@angular/material/button';
     MessagesComponent,
     DashboardComponent,
     PortalComponent,
-    NavigationComponent
+    NavigationComponent,
+    TaxReturnComponent,
+    CreateAccountComponent,
+    AboutComponent,
+    HelpComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,

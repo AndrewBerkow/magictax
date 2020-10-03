@@ -4,10 +4,22 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { PortalComponent } from './portal/portal.component';
+import { TaxReturnComponent } from './tax-return/tax-return.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { AboutComponent } from './about/about.component';
+import { HelpComponent } from './help/help.component';
+import { LinksComponent } from './links/links.component';
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/portal', pathMatch: 'full' },
   { path: 'portal', component: PortalComponent},
+  { path: 'tax-return', component: TaxReturnComponent},
+  { path: 'create-account', component: CreateAccountComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'help', component: HelpComponent},
+  { path: 'links', component: LinksComponent},
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
