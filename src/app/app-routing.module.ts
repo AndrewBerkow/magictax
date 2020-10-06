@@ -9,11 +9,15 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { AboutComponent } from './about/about.component';
 import { HelpComponent } from './help/help.component';
 import { LinksComponent } from './links/links.component';
+import { LoginComponent } from './login/login.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/portal', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent},
+  { path: 'terms', component: TermsComponent},
   { path: 'portal', component: PortalComponent},
   { path: 'tax-return', component: TaxReturnComponent},
   { path: 'create-account', component: CreateAccountComponent},

@@ -23,6 +23,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { AboutComponent } from './about/about.component';
 import { HelpComponent } from './help/help.component';
 import { LinksComponent } from './links/links.component';
+import { LoginComponent } from './login/login.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { LinksComponent } from './links/links.component';
     CreateAccountComponent,
     AboutComponent,
     HelpComponent,
-    LinksComponent
+    LinksComponent,
+    LoginComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
