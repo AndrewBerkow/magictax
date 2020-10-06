@@ -11,13 +11,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortalComponent } from './portal/portal.component';
 import { NavigationComponent } from './navigation/navigation.component';
-
-import { MatSliderModule } from '@angular/material/slider';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
 import { TaxReturnComponent } from './tax-return/tax-return.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { AboutComponent } from './about/about.component';
@@ -25,6 +18,20 @@ import { HelpComponent } from './help/help.component';
 import { LinksComponent } from './links/links.component';
 import { LoginComponent } from './login/login.component';
 import { TermsComponent } from './terms/terms.component';
+
+import { MatSliderModule } from '@angular/material/slider';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatStepperModule} from '@angular/material/stepper';
+
+import { ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -53,8 +60,30 @@ import { TermsComponent } from './terms/terms.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
   ],
+
+//   imports: [
+//     MatButtonModule,
+//     MatFormFieldModule,
+//     MatInputModule,
+//     MatRippleModule,
+//  ]
+//   exports: [
+//     MatButtonModule,
+//     MatFormFieldModule,
+//     MatInputModule,
+//     MatRippleModule,
+//   ],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })

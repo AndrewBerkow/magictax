@@ -11,10 +11,12 @@ export class SessionService {
   authed: boolean = false;
   acceptedTerms: boolean = false;
 
-  checkAuthAndRedirect(): void {
+  checkAuthAndRedirect(stayOnRoute = false): void {
     if(this.authed){
       if(this.acceptedTerms){
-        this.router.navigate(['/tax-return']);
+        if(!stayOnRoute){
+          this.router.navigate(['/tax-return']);
+        }
       }else{
         this.router.navigate(['/terms']);
       }
