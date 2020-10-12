@@ -11,8 +11,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class TaxReturnComponent implements OnInit {
 
   isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  maritalStatus: FormGroup;
+  salaryFormGroup: FormGroup;
 
   constructor(
     private sessionService: SessionService,
@@ -21,13 +21,15 @@ export class TaxReturnComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.sessionService.checkAuthAndRedirect(true);
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
+    // this.sessionService.checkAuthAndRedirect(true); //un commented for now but put back later.
+    this.maritalStatus = this._formBuilder.group({
+      maritalStatusCtrl: ['', Validators.required]
     });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
+
+    this.salaryFormGroup = this._formBuilder.group({
+      salaryCtrl: ['', Validators.required]
     });
+
   }
 
 }
