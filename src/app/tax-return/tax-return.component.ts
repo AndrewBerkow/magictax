@@ -13,6 +13,7 @@ export class TaxReturnComponent implements OnInit {
   isLinear = false;
   maritalStatus: FormGroup;
   salaryFormGroup: FormGroup;
+  taxesPaidFormGroup: FormGroup;
 
   constructor(
     private sessionService: SessionService,
@@ -28,6 +29,10 @@ export class TaxReturnComponent implements OnInit {
 
     this.salaryFormGroup = this._formBuilder.group({
       salaryCtrl: ['', Validators.required]
+    });
+
+    this.taxesPaidFormGroup = this._formBuilder.group({
+      taxesPaidCtrl: ['', Validators.required]
     });
 
   }

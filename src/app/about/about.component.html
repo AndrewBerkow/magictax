@@ -1,1 +1,83 @@
-<p>about works!</p>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+
+    <!-- <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="assets/images/profilePicture.png" alt="Photo of a Shiba Inu" class="img-thumbnail">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card> -->
+
+    <mat-card class="profile-card">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4>Andrew Berkow</h4>
+          <h5>Subtitle</h5>
+        </div>
+
+        <div class="col-md-4">
+          <img src="assets/images/profilePicture.png" alt="Profile Picture" class="img-thumbnail">
+        </div>
+
+        <div class="col-md-8">
+          <p>Testing text</p>
+
+          <button mat-raised-button class="mat-icon-button" aria-label="Favorite">
+            <mat-icon mat-svg-icon="img/icons/favorite.svg"></mat-icon>
+          </button>
+          <button mat-raised-button class="mat-icon-button"  aria-label="Settings">
+            <mat-icon mat-svg-icon="img/icons/menu.svg"></mat-icon>
+          </button>
+          <button mat-raised-button class="mat-icon-button" aria-label="Share">
+            <mat-icon mat-svg-icon="img/icons/baseline-share-24px.svg"></mat-icon>
+          </button>
+        </div>
+
+      </div>
+    </mat-card>
+
+    <!-- <mat-card>
+      <mat-card-title>
+        <mat-card-title>
+          <span class="mat-headline">Card with image</span>
+          <span class="mat-subhead">Extra Large</span>
+        </mat-card-title>
+      </mat-card-title>
+
+      <mat-card-content layout="row" layout-align="space-between">
+        <div class="col-md-6">
+          <img mat-card-image src="assets/images/profilePicture.png" alt="Profile Picture" class="img-thumbnail">
+        </div>
+
+        <div class="col-md-6">
+          <button mat-raised-button class="mat-icon-button" aria-label="Favorite">
+            <mat-icon mat-svg-icon="img/icons/favorite.svg"></mat-icon>
+          </button>
+          <button mat-raised-button class="mat-icon-button"  aria-label="Settings">
+            <mat-icon mat-svg-icon="img/icons/menu.svg"></mat-icon>
+          </button>
+          <button mat-raised-button class="mat-icon-button" aria-label="Share">
+            <mat-icon mat-svg-icon="img/icons/baseline-share-24px.svg"></mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card> -->
+
+  </mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>

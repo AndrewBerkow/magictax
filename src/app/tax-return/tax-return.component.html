@@ -42,6 +42,23 @@
     </form>
   </mat-step>
 
+  <mat-step [stepControl]="taxesPaidFormGroup">
+    <form [formGroup]="taxesPaidFormGroup">
+      <ng-template matStepLabel>Taxes Paid</ng-template>
+
+      <mat-form-field>
+        <mat-label>Salary</mat-label>
+        <input matInput type="number" class="example-right-align" formControlName="taxesPaidCtrl" required>
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+      <!-- @todo - add tooltips and text-->
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
     <p>You are now done.</p>

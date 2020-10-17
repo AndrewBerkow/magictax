@@ -33,6 +33,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRippleModule} from '@angular/material/core';
+import {MatGridListModule} from '@angular/material/grid-list';
+// import {MatGridTiletModule} from '@angular/material/grid-';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,8 @@ import {MatRippleModule} from '@angular/material/core';
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatGridListModule
   ],
 
 //   imports: [

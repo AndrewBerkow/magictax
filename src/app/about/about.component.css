@@ -1,0 +1,8 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+.img-thumbnail{
+  max-height: 100px;
+  max-width: 100x;
+}
