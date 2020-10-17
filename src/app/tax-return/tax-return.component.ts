@@ -10,7 +10,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class TaxReturnComponent implements OnInit {
 
-  maritalStatus: FormGroup;
+  maritalStatus: null;
+  salary: null;
+  taxesPaid: null;
+
+  maritalStatusFormGroup: FormGroup;
   salaryFormGroup: FormGroup;
   taxesPaidFormGroup: FormGroup;
 
@@ -22,7 +26,7 @@ export class TaxReturnComponent implements OnInit {
 
   ngOnInit() {
     this.sessionService.checkAuthAndRedirect(true);
-    this.maritalStatus = this._formBuilder.group({
+    this.maritalStatusFormGroup = this._formBuilder.group({
       maritalStatusCtrl: ['', Validators.required]
     });
 
@@ -34,6 +38,10 @@ export class TaxReturnComponent implements OnInit {
       taxesPaidCtrl: ['', Validators.required]
     });
 
+  }
+
+  submit(): void {
+    //@todo - submit tax form.
   }
 
 }

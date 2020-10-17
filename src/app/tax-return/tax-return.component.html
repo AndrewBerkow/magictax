@@ -1,67 +1,83 @@
-<mat-vertical-stepper [linear]=true #stepper>
+<mat-card class="col-md-6 offset-md-3">
 
-  <mat-step [stepControl]="maritalStatus">
-    <form [formGroup]="maritalStatus">
-      <ng-template matStepLabel>Marital Status</ng-template>
-      <mat-form-field>
-        <mat-label>Status</mat-label>
-        <!-- @todo - make this a for loop that pulls options from config -->
-        <mat-select required formControlName="maritalStatusCtrl">
-          <mat-option value=""></mat-option>
-          <mat-option value="single">Single</mat-option>
-          <mat-option value="married-filing-jointly">Married Filing Jointly</mat-option>
-          <mat-option value="married-filing-separately">Married Filing Separately</mat-option>
-          <mat-option value="head-of-household">Head of Household</mat-option>
-          <mat-option value="widow-with-dependent-child">Qalifying Widow(er) with Dependent Child</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <!-- @todo - add tooltips and text-->
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
+  <div class="text-center">
+    <h3 class="text-center portal-card-header">Calculate your tax return</h3>
+  </div>
 
-  <mat-step [stepControl]="salaryFormGroup">
-    <form [formGroup]="salaryFormGroup">
-      <ng-template matStepLabel>Salary</ng-template>
+  <mat-card-content>
 
-      <mat-form-field>
-        <mat-label>Salary</mat-label>
-        <input matInput type="number" class="example-right-align" formControlName="salaryCtrl" required>
-        <span matPrefix>$&nbsp;</span>
-        <span matSuffix>.00</span>
-      </mat-form-field>
-      <!-- @todo - add tooltips and text-->
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
+    <mat-vertical-stepper [linear]=true #stepper>
 
-  <mat-step [stepControl]="taxesPaidFormGroup">
-    <form [formGroup]="taxesPaidFormGroup">
-      <ng-template matStepLabel>Taxes Paid</ng-template>
+      <mat-step [stepControl]="maritalStatus">
+        <form [formGroup]="maritalStatusFormGroup">
+          <ng-template matStepLabel>Marital Status</ng-template>
+          <mat-form-field>
+            <mat-label>Status</mat-label>
+            <!-- @todo - make this a for loop that pulls options from config -->
+            <mat-select required formControlName="maritalStatusCtrl" [(ngModel)]="maritalStatus">
+              <mat-option value=""></mat-option>
+              <mat-option value="single">Single</mat-option>
+              <mat-option value="married-filing-jointly">Married Filing Jointly</mat-option>
+              <mat-option value="married-filing-separately">Married Filing Separately</mat-option>
+              <mat-option value="head-of-household">Head of Household</mat-option>
+              <mat-option value="widow-with-dependent-child">Qalifying Widow(er) with Dependent Child</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
 
-      <mat-form-field>
-        <mat-label>Salary</mat-label>
-        <input matInput type="number" class="example-right-align" formControlName="taxesPaidCtrl" required>
-        <span matPrefix>$&nbsp;</span>
-        <span matSuffix>.00</span>
-      </mat-form-field>
-      <!-- @todo - add tooltips and text-->
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
+      <mat-step [stepControl]="salaryFormGroup">
+        <form [formGroup]="salaryFormGroup">
+          <ng-template matStepLabel>Salary</ng-template>
 
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
-</mat-vertical-stepper>
+          <mat-form-field>
+            <mat-label>Salary</mat-label>
+            <input matInput type="number" class="example-right-align" formControlName="salaryCtrl"  [(ngModel)]="salary" required>
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+          <!-- @todo - add tooltips and text-->
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="taxesPaidFormGroup">
+        <form [formGroup]="taxesPaidFormGroup">
+          <ng-template matStepLabel>Taxes Paid</ng-template>
+
+          <mat-form-field>
+            <mat-label>Taxes Paid</mat-label>
+            <input matInput type="number" class="example-right-align" formControlName="taxesPaidCtrl" [(ngModel)]="taxesPaid" required>
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+          <!-- @todo - add tooltips and text-->
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+
+        <div>
+          <p>Ensure the following information is correct and click done to calculate your tax refund or tax owed.</p>
+          <p>Martial Status: {{maritalStatus}}</p>
+          <p>Salary: {{salary | currency}}</p>
+          <p>Taxes Paid: {{taxesPaid | currency}}</p>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="submit()">Submit</button>
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+
+  </mat-card-content>
+</mat-card>
