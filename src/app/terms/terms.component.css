@@ -1,0 +1,15 @@
+.portal-card-header{
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.terms{
+  margin-top: 40px;
+  height:500px;
+  overflow:auto;
+}
+
+.terms > h3{
+  font-weight: bold;
+}
