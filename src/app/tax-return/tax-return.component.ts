@@ -22,7 +22,7 @@ export class TaxReturnComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // this.sessionService.checkAuthAndRedirect(true); //un commented for now but put back later.
+    this.sessionService.checkAuthAndRedirect(true);
     this.maritalStatus = this._formBuilder.group({
       maritalStatusCtrl: ['', Validators.required]
     });

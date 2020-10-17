@@ -34,6 +34,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRippleModule} from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
 // import {MatGridTiletModule} from '@angular/material/grid-';
 
 @NgModule({
@@ -72,7 +73,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatInputModule,
     MatRippleModule,
     MatSelectModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDividerModule
   ],
 
 //   imports: [

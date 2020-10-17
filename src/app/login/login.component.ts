@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { SessionService } from '../session.service';
+import {Form, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,12 +10,30 @@ import { SessionService } from '../session.service';
 })
 export class LoginComponent implements OnInit {
 
+  emailFormGroup: FormGroup;
+  passwordFromGroup: FormGroup;
+
   constructor(
     private router: Router,
-    private sessionService: SessionService
+    private sessionService: SessionService,
+    private _formBuilder: FormBuilder
     ) { }
 
   ngOnInit(): void {
+    this.sessionService.checkAuthAndRedirect();
+
+    this.emailFormGroup = this._formBuilder.group({
+      emailCtrl: ['', Validators.required, Validators.email]
+    });
+
+    this.passwordFromGroup = this._formBuilder.group({
+      passwordCtrl: ['', Validators.required]
+    });
+  }
+
+  login(): void {
+    //@todo - validate this even though login will not be truly functional
+    this.sessionService.authed = true;
     this.sessionService.checkAuthAndRedirect();
   }
 
@@ -24,10 +43,8 @@ export class LoginComponent implements OnInit {
     this.sessionService.checkAuthAndRedirect();
   }
 
-  loginWithFacebook(): void {
-    this.sessionService.authed = true;
-    //@todo logic for facebook auth (or google), decide what that is
-    this.sessionService.checkAuthAndRedirect();
+  createAccount(): void {
+    this.router.navigate(['/create-account']);
   }
 
 }
