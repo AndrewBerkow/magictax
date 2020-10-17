@@ -1,1 +1,37 @@
-<p>create-account works!</p>
+<div class="row">
+  <mat-card class="col-md-8 offset-md-2">
+    <div class="text-center">
+      <h3 class="text-center portal-card-header">Create Account</h3>
+    </div>
+
+    <mat-card-content class="text-center">
+      <p class="text-center">
+        Enter email and password
+      </p>
+    </mat-card-content>
+
+    <div class="row">
+
+      <div [formGroup]="emailFormGroup" class="col-md-6 offset-md-3">
+
+        <mat-form-field class="col-sm-12">
+          <mat-label>Email</mat-label>
+          <input matInput  formControlName="emailCtrl" required>
+        </mat-form-field>
+
+      </div>
+
+      <div [formGroup]="passwordFromGroup" class="col-md-6 offset-md-3">
+          <mat-form-field  class="col-sm-12">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="passwordCtrl" required>
+          </mat-form-field>
+      </div>
+
+    </div>
+
+    <mat-card-actions class="text-center">
+      <button mat-raised-button (click)="createAccount()" color="primary">Create Account</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
