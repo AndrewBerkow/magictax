@@ -10,7 +10,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class TaxReturnComponent implements OnInit {
 
-  isLinear = false;
   maritalStatus: FormGroup;
   salaryFormGroup: FormGroup;
   taxesPaidFormGroup: FormGroup;

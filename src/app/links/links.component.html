@@ -1,1 +1,23 @@
-<p>links works!</p>
+<mat-card>
+
+  <div class="text-center">
+    <h3 class="text-center portal-card-header">Links</h3>
+  </div>
+
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div class="links">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+          <div *ngFor="let link of links" class="col-sm-12">
+            <p>{{link.title}}</p>
+            <a href="{{link.link}}">{{link.link}}</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+
+</mat-card>
