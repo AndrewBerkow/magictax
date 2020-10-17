@@ -2,36 +2,39 @@
   <h1 class="col-sm-12 text-center">Welcome to MagicTax!</h1>
 </div>
 
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Tax Return Calculator</mat-card-title>
-  </mat-card-header>
 
-  <mat-card-content>
-    <p>
-      Calculate your tax return quick and easy!
-    </p>
-    <p>Get started Below</p>
-  </mat-card-content>
+<div class="row">
+  <mat-card class="col-md-6">
+    <div class="text-center">
+      <h3 class="text-center portal-card-header">Tax Return Calculator</h3>
+    </div>
 
-  <mat-card-actions>
-    <button mat-raised-button (click)="getStarted()" color="primary">Get Started</button>
-  </mat-card-actions>
-</mat-card>
+    <mat-card-content  class="text-center">
+      <p  class="text-center">
+        Calculate your tax return quick and easy!
+      </p>
+      <p  class="text-center">Get started Below</p>
+    </mat-card-content>
 
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Need Help?</mat-card-title>
-  </mat-card-header>
+    <mat-card-actions class="text-center">
+      <button mat-raised-button (click)="getStarted()" color="primary">Get Started</button>
+    </mat-card-actions>
+  </mat-card>
 
-  <mat-card-content>
-    <p>
-      We have you covered
-    </p>
-    <p>Find the right form you need!</p>
-  </mat-card-content>
+  <mat-card  class="col-md-6">
+    <div class="text-center">
+      <h3 class="text-center portal-card-header">Need Help?</h3>
+    </div>
 
-  <mat-card-actions>
-    <button mat-raised-button color="primary">Find Form</button>
-  </mat-card-actions>
-</mat-card>
+    <mat-card-content class="text-center">
+      <p class="text-center">
+        We have you covered
+      </p>
+      <p class="text-center">Find the right form you need!</p>
+    </mat-card-content>
+
+    <mat-card-actions class="text-center">
+      <button mat-raised-button color="primary">Find Form</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
