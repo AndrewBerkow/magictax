@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject, fromEventPattern } from 'rxjs';
 import { HttpClient } from "@angular/common/http"
+import { Router } from "@angular/router";
+
 // import { Record } from "./record.model";
 
 import { from, Observable, throwError } from 'rxjs';
@@ -12,9 +14,14 @@ import { map, catchError } from 'rxjs/operators';
 export class TaxService {
 
   taxReturnId: null;
+  taxReturnValue: number = 0;
+  returnSubmitted: boolean = false;
   backendApiEndpoint: string = "http://localhost:3000/api";
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
   saveRecord(email: string, m_status: string, income, tax_paid) {
     const record = {
@@ -29,6 +36,9 @@ export class TaxService {
       .subscribe(responseData => {
         const msg = responseData.message;
         this.taxReturnId = responseData.message._id;
+        this.taxReturnValue = responseData.message.tax_return;
+        this.returnSubmitted = true;
+        this.router.navigate(['/refund']);
       });
   }
 }

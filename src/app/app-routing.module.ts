@@ -11,6 +11,7 @@ import { HelpComponent } from './help/help.component';
 import { LinksComponent } from './links/links.component';
 import { LoginComponent } from './login/login.component';
 import { TermsComponent } from './terms/terms.component';
+import { RefundComponent } from './refund/refund.component';
 
 
 
@@ -24,9 +25,11 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'help', component: HelpComponent},
   { path: 'links', component: LinksComponent},
+  { path: 'refund', component: RefundComponent},
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
+
 ];
 
 @NgModule({

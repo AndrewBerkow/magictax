@@ -36,6 +36,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRippleModule} from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
+import { RefundComponent } from './refund/refund.component';
 // import {MatGridTiletModule} from '@angular/material/grid-';
 
 @NgModule({
@@ -53,7 +54,8 @@ import {MatDividerModule} from '@angular/material/divider';
     HelpComponent,
     LinksComponent,
     LoginComponent,
-    TermsComponent
+    TermsComponent,
+    RefundComponent
   ],
   imports: [
     BrowserModule,

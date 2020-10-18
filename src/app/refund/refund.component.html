@@ -1,0 +1,21 @@
+<mat-card class="col-md-8 offset-md-2">
+
+  <div class="text-center">
+    <h3 *ngIf="!taxService.returnSubmitted" class="text-center portal-card-header">No results!</h3>
+    <h3 *ngIf="taxService.returnSubmitted && taxService.taxReturnValue >= 0" class="text-center portal-card-header">Congrats! Your refund is:</h3>
+    <h3 *ngIf="taxService.taxReturnValue < 0" class="text-center portal-card-header">Sorry, you owe:</h3>
+  </div>
+
+  <mat-card-content>
+    <p *ngIf="!taxService.returnSubmitted" class="text-center">You have not submitted your tax info yet. Please click button below to compute.</p>
+    <h1 *ngIf="taxService.returnSubmitted && taxService.taxReturnValue >= 0" class="refund text-center">{{taxService.taxReturnValue | currency}}</h1>
+    <h1 *ngIf="taxService.taxReturnValue < 0" class="amountOwed text-center">{{taxService.taxReturnValue*-1 | currency}}</h1>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+  <mat-card-actions  class="text-center">
+    <button *ngIf="!taxService.returnSubmitted" mat-raised-button (click)="getStarted()" color="primary">Get Started</button>
+    <button *ngIf="taxService.returnSubmitted" mat-raised-button (click)="getStarted()" color="primary">Calculate Again</button>
+    <!-- <button mat-raised-button (click)="accept()" color="primary">Accept</button> -->
+  </mat-card-actions>
+</mat-card>

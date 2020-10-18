@@ -8,12 +8,12 @@ export class SessionService {
 
   constructor(private router: Router) { }
 
-  authed: boolean = true;
-  acceptedTerms: boolean = true;
+  // authed: boolean = true;
+  // acceptedTerms: boolean = true;
   email: string = "testemail@test.com";
 
-  // authed: boolean = false;
-  // acceptedTerms: boolean = false;
+  authed: boolean = false;
+  acceptedTerms: boolean = false;
 
   checkAuthAndRedirect(stayOnRoute = false): void {
     if(this.authed){
