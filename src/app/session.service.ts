@@ -10,6 +10,7 @@ export class SessionService {
 
   authed: boolean = true;
   acceptedTerms: boolean = true;
+  email: string = "testemail@test.com";
 
   // authed: boolean = false;
   // acceptedTerms: boolean = false;
@@ -26,5 +27,9 @@ export class SessionService {
     }else{
       this.router.navigate(['/login']);
     }
+  }
+
+  getEmail(): string{
+    return this.email;
   }
 }

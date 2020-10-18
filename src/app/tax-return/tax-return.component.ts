@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { SessionService } from '../session.service';
+import { TaxService} from '../tax.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -20,6 +21,7 @@ export class TaxReturnComponent implements OnInit {
 
   constructor(
     private sessionService: SessionService,
+    public taxService: TaxService,
     private router: Router,
     private _formBuilder: FormBuilder
     ) { }
@@ -41,7 +43,9 @@ export class TaxReturnComponent implements OnInit {
   }
 
   submit(): void {
-    //@todo - submit tax form.
+    const reponse = this.taxService.saveRecord(
+      this.sessionService.getEmail(), this.maritalStatus, this.salary, this.taxesPaid
+    );
   }
 
 }
