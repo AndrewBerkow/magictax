@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortalComponent } from './portal/portal.component';
@@ -38,7 +37,6 @@ import { RefundComponent } from './refund/refund.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MessagesComponent,
     PortalComponent,
     NavigationComponent,
     TaxReturnComponent,
