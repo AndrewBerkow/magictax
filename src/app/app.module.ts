@@ -8,14 +8,12 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortalComponent } from './portal/portal.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TaxReturnComponent } from './tax-return/tax-return.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { AboutComponent } from './about/about.component';
-import { HelpComponent } from './help/help.component';
 import { LinksComponent } from './links/links.component';
 import { LoginComponent } from './login/login.component';
 import { TermsComponent } from './terms/terms.component';
@@ -45,13 +43,11 @@ import { RefundComponent } from './refund/refund.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent,
     PortalComponent,
     NavigationComponent,
     TaxReturnComponent,
     CreateAccountComponent,
     AboutComponent,
-    HelpComponent,
     LinksComponent,
     LoginComponent,
     TermsComponent,
