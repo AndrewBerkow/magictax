@@ -16,6 +16,9 @@ export class TaxService {
   taxReturnId: null;
   taxReturnValue: number = 0;
   returnSubmitted: boolean = false;
+  m_status: string = "";
+  income: number = 0;
+  tax_paid: number = 0;
   backendApiEndpoint: string = "http://localhost:3000/api";
 
   constructor(
@@ -41,33 +44,23 @@ export class TaxService {
         this.router.navigate(['/refund']);
       });
   }
+
+  //NEED TO USE EMAIL STRING IN QUERY BELOW & undo comments
+  loadRecord(email: string) {
+    return this.http
+      .get<any>("http://localhost:3000/api/records/?email=k@tr.com")
+      .subscribe(responseData => {
+        // this.taxReturnId = responseData.foundRecord._id;
+        this.m_status = responseData.foundRecord.m_status;
+        // this.income = responseData.foundRecord.income;
+        // this.tax_paid = responseData.foundRecord.tax_paid;
+        // this.taxReturnValue = responseData.foundRecord.tax_return;
+        this.returnSubmitted = true;
+        this.router.navigate(['/tax-return']);
+      });
+  }
+
+
+
 }
 
-
-
-// //CODE TO RECOVER DATA DOES NOT WORK YET
-
-//  getRecordUpdateListener() {
-//     return this.recordsUpdated.asObservable();
-//   }
-//   private records : Record[];
-//   private recordsUpdated = new Subject<Record[]>(); // creates rxjs object holding an array of blogs
-//   getRecord() {
-//     this.getRecordFromServer()
-//     .subscribe((data:any) => {
-//       console.log(data);
-//       this.records = data.data;
-//     });
-//   }
-
-//   getRecordFromServer() {
-//     return this.http.get("http://localhost:3000/api/records/?email=jw@t.org")
-//         .pipe(
-//            map((data: Record[]) => {
-//              return data;
-//            }), catchError( error => {
-//              return throwError( 'Something went wrong!' );
-//            })
-
-//         )
-//     }

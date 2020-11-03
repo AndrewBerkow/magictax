@@ -48,4 +48,11 @@ export class TaxReturnComponent implements OnInit {
     );
   }
 
+  load(): void {
+    const reponse = this.taxService.loadRecord(
+      this.sessionService.getEmail()
+    );
+  }
+
+
 }

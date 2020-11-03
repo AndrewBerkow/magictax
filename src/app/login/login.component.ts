@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     //@todo - validate this even though login will not be truly functional
     this.sessionService.authed = true;
+    this.sessionService.acceptedTerms = true; //If logged in then agreed to T&C when created account.
     this.sessionService.checkAuthAndRedirect();
   }
 
